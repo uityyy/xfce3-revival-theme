@@ -47,7 +47,7 @@ trough, tab, toolbar :disabled {
 
 *:disabled {
 	color: @disabled_text;
-	text-shadow: 0 1px 1px @illumination;
+	text-shadow: 1px 1px 0 @illumination;
 }
 
 button:hover, menuitem:hover, menuitem:selected,
