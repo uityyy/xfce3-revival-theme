@@ -5,7 +5,7 @@ __This theme is in no way endorsed or supported by the XFCE desktop.__ Please di
 
 ## Examples
 Here is what the theme looks like in practice:
-![Xfce3-Revival with the default palette](Xfce3-Revival-Demo.png)
+![Xfce3-Revival with the default palette](Demo-Xfce3-Revival.png)
 
 | Multiple              | Color                 | Variants                    |
 | --------------------- | --------------------- | --------------------------- |
