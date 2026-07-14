@@ -1,0 +1,26 @@
+style "normal" {
+	engine "xfce" { smooth_edge = true }
+	bg[NORMAL] = "#e0bfa1"
+	bg[PRELIGHT] = "#09b488"
+	bg[ACTIVE] = "#d3ac88"
+	
+	text[NORMAL] = "#000"
+	text[SELECTED] = "#000"
+	text[INSENSITIVE] = "#717170"
+
+	base[NORMAL] = "#d1ae7f"
+	base[SELECTED] = "#ff3089"
+	base[ACTIVE] = "#09b488" # selected but unfocused
+	base[INSENSITIVE] = "#00b0c9"
+}
+widget_class "*" style "normal"
+
+
+# Different background for text boxes than other fields
+
+style "textbox" {
+	base[NORMAL] = "#00b0c9"
+}
+widget_class "*GtkText*" style "textbox"
+widget_class "*GtkEntry*" style "textbox"
+widget_class "*GtkComboBox*" style "textbox"
