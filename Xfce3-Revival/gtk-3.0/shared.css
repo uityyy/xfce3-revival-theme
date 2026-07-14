@@ -9,10 +9,15 @@
         background-color: @inactive_titlebar;
 }
 
-/* Focus indicators */
+/* Magic color names that Thunar uses */
+@define-color theme_selected_bg_color @selected_bg;
+@define-color theme_unfocused_selected_bg_color @selected_bg;
+
+/* Focus indicators + disable symbolic icons */
 * {
 	outline: 1px solid @text_color;
 	outline-offset: -2px;
+	-gtk-icon-style: regular;
 }
 
 /* Text and background color */
