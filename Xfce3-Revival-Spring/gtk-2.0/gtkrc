@@ -1,0 +1,3 @@
+gtk-color-scheme = "bg_color:#aecec3;base_color:#bc9380;entry_bg_color:#498b8a;hover_bg_color:#80b8ca;active_bg_color:#84ac9e;fg_color:#000;insensitive_fg_color:#717170;entry_fg_color:#fff;selected_fg_color:#000;selected_bg_color:#b60bca"
+
+include "../../Xfce3-Revival/gtk-2.0/shared.gtkrc"

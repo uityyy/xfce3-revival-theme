@@ -1,24 +1,24 @@
 /* Palette colors */
-@define-color control_bg #c3b2ab;
-@define-color view_bg #899daa;
-@define-color entry_bg #738f7d;
-@define-color hover_bg #949284;
+@define-color bg_color #c3b2ab;
+@define-color base_color #899daa;
+@define-color entry_bg_color #738f7d;
+@define-color hover_bg_color #949284;
 @define-color active_titlebar #b09782;
 @define-color active_titlebar_text #fff;
 @define-color inactive_titlebar #686f87;
 @define-color inactive_titlebar_text #000;
 
 /* Observed colors* */
-@define-color text_color #000; 
-@define-color disabled_text #717170;
-@define-color entry_text_color #fff;
-@define-color selected_text #fff;
-@define-color selected_bg #8c0f3d;
+@define-color fg_color #000; 
+@define-color insensitive_fg_color #717170;
+@define-color entry_fg_color #fff;
+@define-color selected_fg_color #fff;
+@define-color selected_bg_color #8c0f3d;
 
 /* Derived colors */
-@define-color border_color shade(@control_bg, 0.7);
-@define-color illumination shade(@control_bg, 1.3);
-@define-color shadow shade(@control_bg, 0.9);
-@define-color pressed_bg shade(@control_bg, 0.8);
+@define-color border_color shade(@bg_color, 0.7);
+@define-color illumination shade(@bg_color, 1.3);
+@define-color shadow shade(@bg_color, 0.9);
+@define-color active_bg_color shade(@bg_color, 0.8);
 
 

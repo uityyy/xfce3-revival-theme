@@ -1,0 +1,27 @@
+style "normal" {
+	engine "xfce" { smooth_edge = true }
+	bg[NORMAL] = @bg_color
+	bg[PRELIGHT] = @hover_bg_color
+	bg[ACTIVE] = @active_bg_color
+	
+	text[NORMAL] = @fg_color
+	text[SELECTED] = @selected_fg_color
+	text[INSENSITIVE] = @insensitive_fg_color
+
+	base[NORMAL] = @base_color
+	base[SELECTED] = @selected_bg_color
+	base[ACTIVE] = @hover_bg_color  # TODO: Add separate palette entries?
+	base[INSENSITIVE] = @base_color # TODO: Add separate palette entries?
+}
+widget_class "*" style "normal"
+
+
+# Different background for text boxes than other fields
+
+style "textbox" {
+	text[NORMAL] = @entry_fg_color
+	base[NORMAL] = @entry_bg_color
+}
+widget_class "*GtkText*" style "textbox"
+widget_class "*GtkEntry*" style "textbox"
+widget_class "*GtkComboBox*" style "textbox"

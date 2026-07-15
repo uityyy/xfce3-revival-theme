@@ -10,12 +10,12 @@
 }
 
 /* Magic color names that Thunar uses */
-@define-color theme_selected_bg_color @selected_bg;
-@define-color theme_unfocused_selected_bg_color @selected_bg;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_unfocused_selected_bg_color @selected_bg_color;
 
 /* Focus indicators + disable symbolic icons */
 * {
-	outline: 1px solid @text_color;
+	outline: 1px solid @fg_color;
 	outline-offset: -2px;
 	-gtk-icon-style: regular;
 }
@@ -23,26 +23,26 @@
 /* Text and background color */
 .background, button, calendar.header, check:hover, frame, menu, menubar,
 notebook, paned, radio:hover, slider, tab:checked, .toolbar {
-	color: @text_color;
-	background-color: @control_bg;
+	color: @fg_color;
+	background-color: @bg_color;
 }
 
 .textview, .view, check, combobox menu, iconview, list, radio,
 textview text, sidebar treeview, view {
-	color: @text_color;
-	background-color: @view_bg;
+	color: @fg_color;
+	background-color: @base_color;
 }
 
 entry {
-	color: @entry_text_color;
-	background-color: @entry_bg;
+	color: @entry_fg_color;
+	background-color: @entry_bg_color;
 }
 
 combobox menuitem:hover, combobox menuitem:checked, levelbar .filled,
 progress, switch:checked, 
 :selected, selection, XfdesktopIconView.label:selected {
-	color: @selected_text;
-	background-color: @selected_bg;
+	color: @selected_fg_color;
+	background-color: @selected_bg_color;
 }
 
 button:checked, calendar.highlight, progressbar, switch,
@@ -51,13 +51,13 @@ trough, tab, toolbar :disabled {
 }
 
 *:disabled {
-	color: @disabled_text;
+	color: @insensitive_fg_color;
 	text-shadow: 1px 1px 0 @illumination;
 }
 
 button:hover, menuitem:hover, menuitem:selected,
 *:selected:not(:focus), selection:not(:focus) {
-	background-color: @hover_bg;
+	background-color: @hover_bg_color;
 }
 
 tooltip {
@@ -73,8 +73,8 @@ separator {
 }
 
 .rubberband, XfdesktopIconView .rubberband {
-	background-color: alpha(@selected_bg, .3);
-	border: 1px solid @selected_bg;
+	background-color: alpha(@selected_bg_color, .3);
+	border: 1px solid @selected_bg_color;
 }
 
 filechooser {
@@ -183,10 +183,10 @@ button, calendar.header, menu, menuitem:hover, menuitem:selected, slider {
 
 buttonbox button.default:not(:focus){
 	box-shadow: 1px 1px 0 0 @illumination inset, -1px -1px 0 0px @shadow inset,
-		 4px 4px 0px 1px @border_color, 3px 3px 0px 1px @control_bg,
-		-4px -4px 0px 1px @border_color, -3px -3px 0px 1px @control_bg,
-		-4px 4px 0px 1px @border_color, -3px 3px 0px 1px @control_bg,
-		4px -4px 0px 1px @border_color, 3px -3px 0px 1px @control_bg;
+		 4px 4px 0px 1px @border_color, 3px 3px 0px 1px @bg_color,
+		-4px -4px 0px 1px @border_color, -3px -3px 0px 1px @bg_color,
+		-4px 4px 0px 1px @border_color, -3px 3px 0px 1px @bg_color,
+		4px -4px 0px 1px @border_color, 3px -3px 0px 1px @bg_color;
 }
 
 button:checked, levelbar trough, progressbar, scale trough, switch {
@@ -194,24 +194,24 @@ button:checked, levelbar trough, progressbar, scale trough, switch {
 }
 
 progress, levelbar .filled {
-        box-shadow: 1px 1px 0 0 shade(@selected_bg, 1.4) inset,
-		-1px -1px 0 0px shade(@selected_bg, .9) inset;
+        box-shadow: 1px 1px 0 0 shade(@selected_bg_color, 1.4) inset,
+		-1px -1px 0 0px shade(@selected_bg_color, .9) inset;
 	margin: 0px;
 }
 
 button:focus, entry:focus, switch slider:focus {
 	box-shadow: 1px 1px 0 0 @illumination inset,
-		-1px -1px 0 0px @shadow inset, 0 0 0 1px @text_color;
+		-1px -1px 0 0px @shadow inset, 0 0 0 1px @fg_color;
 }
 
 entry:focus {
-	box-shadow: -1px -1px 0 0 shade(@entry_bg, 1.3) inset,
-		1px 1px 0 0px shade(@entry_bg, 0.7) inset, 0 0 0 1px @text_color;
+	box-shadow: -1px -1px 0 0 shade(@entry_bg_color, 1.3) inset,
+		1px 1px 0 0px shade(@entry_bg_color, 0.7) inset, 0 0 0 1px @fg_color;
 }
 
 button:checked:focus, scale:focus trough {
 	box-shadow: -1px -1px 0 0 @illumination inset,
-		1px 1px 0 0px @shadow inset, 0 0 0 1px @text_color;
+		1px 1px 0 0px @shadow inset, 0 0 0 1px @fg_color;
 }
 
 button:focus, button.default, entry:focus,
@@ -222,13 +222,13 @@ scale:focus, switch slider:focus {
 }
 
 checkbutton:focus, entry:focus, label:focus, radiobutton:focus {
-	outline: 1px solid @text_color;
+	outline: 1px solid @fg_color;
 }
 
 button:active, .xfce4-panel button:active {
-	background-color: @pressed_bg;
-	border: 1px solid shade(@pressed_bg, 0.7);
-	box-shadow: 0 0 0 1px @text_color;
+	background-color: @active_bg_color;
+	border: 1px solid shade(@active_bg_color, 0.7);
+	box-shadow: 0 0 0 1px @fg_color;
 }
 
 stack, tab {
@@ -278,8 +278,8 @@ toolbar button {
 }
 
 switch:checked {
-	box-shadow: -1px -1px 0 0 shade(@selected_bg, 1.4) inset,
-		1px 1px 0 0px shade(@selected_bg, .9) inset;
+	box-shadow: -1px -1px 0 0 shade(@selected_bg_color, 1.4) inset,
+		1px 1px 0 0px shade(@selected_bg_color, .9) inset;
 }
 
 check, radio {
@@ -304,13 +304,13 @@ check, arrow, scrollbar button {
 }
 
 scale.vertical slider, scrollbar.vertical slider {
-	background: repeating-linear-gradient(@border_color, @border_color 1px, @illumination 1px, @illumination 2px) 0 calc(50% + 0.25px) @control_bg;
+	background: repeating-linear-gradient(@border_color, @border_color 1px, @illumination 1px, @illumination 2px) 0 calc(50% + 0.25px) @bg_color;
 	background-size: 11px 10px;
 	background-repeat: no-repeat;
 }
 
 scale.horizontal slider, scrollbar.horizontal slider {
-	background: repeating-linear-gradient(90deg, @border_color, @border_color 1px, @illumination 1px, @illumination 2px) calc(50% + 0.25px) 0 @control_bg;
+	background: repeating-linear-gradient(90deg, @border_color, @border_color 1px, @illumination 1px, @illumination 2px) calc(50% + 0.25px) 0 @bg_color;
 	background-size: 10px 11px;
 	background-repeat: no-repeat;
 }

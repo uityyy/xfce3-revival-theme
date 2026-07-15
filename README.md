@@ -16,9 +16,10 @@ Here is what the theme looks like in practice:
 | Mauve                 | Sunny                 | Troica                      |
 | ![Mauve](Mauve.png)   | ![Sunny](Sunny.png)   | ![Troica](Troica.png)       |
 
+__Update__: There are now GTK2 settings for each color scheme! For these you will need the xfce GTK2 engine. On Debian systems the package for this is gtk2-engines-xfce, which has been dropped from the distribution but still installs correctly from the archives. I'm taking advantage of the GTK2 xfce-smooth look, which isn't identical to the GTK1 theme I originally copied but is very close.
+
 ## Limitations
 - There is not (yet) any attempt to recreate the XFCE 3 themes that used a repeating texture for window and widget backgrounds.
-- Neither are there (at this point) corresponding GTK2 and GTK4 themes. If you still have GTK2 applications installed, you may wish to consider installing the old gtk2-engines-package and using the Xfce-smooth theme as a loose equivalent. (On Debian this package has been dropped but still functions if installed from the archives as of 2026.)
 - Because this is a new, from-scratch theme there are probably many, *MANY* edge cases and unusual UI structures it does not properly handle. The initial release has been tested against AWF GTK 3,the XFCE 4.20 settings panels, and not much else.
 - And as briefly mentioned above, this is not a pixel-perfect recreation of GTK1 UI. Key differences include listbox and textbox border styles, exact button sizes and spacing, and the presence of separate styling for non-focused selections.
 
