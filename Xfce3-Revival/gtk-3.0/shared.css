@@ -21,8 +21,8 @@
 }
 
 /* Text and background color */
-.background, button, calendar.header, check:hover, frame, menu, menubar,
-notebook, paned, radio:hover, slider, tab:checked, .toolbar {
+.background, button, calendar.header, check:hover, frame, headerbar,
+menu, menubar,notebook, paned, radio:hover, slider, tab:checked, .toolbar {
 	color: @fg_color;
 	background-color: @bg_color;
 }
