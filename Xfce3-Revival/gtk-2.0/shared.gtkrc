@@ -1,8 +1,14 @@
 style "normal" {
 	engine "xfce" { smooth_edge = true }
+
+	fg[NORMAL] = @fg_color
+	fg[SELECTED] = @selected_fg_color
+	fg[INSENSITIVE] = @insensitive_fg_color
+
 	bg[NORMAL] = @bg_color
 	bg[PRELIGHT] = @hover_bg_color
 	bg[ACTIVE] = @active_bg_color
+	bg[INSENSITIVE] = @bg_color
 	
 	text[NORMAL] = @fg_color
 	text[SELECTED] = @selected_fg_color
