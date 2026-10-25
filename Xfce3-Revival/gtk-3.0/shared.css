@@ -339,6 +339,10 @@ check:checked {
 	background-image: url("checkmark.png");
 }
 
+menu radio:checked {
+	background: radial-gradient(circle at 51% 52%, @fg_color 25%, @base_color 25%);
+}
+
 spinner:checked {
 	animation: spin;
 }
