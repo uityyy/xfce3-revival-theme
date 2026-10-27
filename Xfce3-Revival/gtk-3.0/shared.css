@@ -165,6 +165,9 @@ frame, notebook {
 	border: 2px groove @border_color;
 	padding: 3px;
 }
+frame.border-inset { border: 1px inset @border_color; }
+frame.border-outset { border: 1px outset @border_color; }
+frame.border-ridge { border: 2px ridge @border_color; }
 
 button, calendar, calendar.header, entry, levelbar trough, 
 menu, menuitem:hover, menuitem:selected,
