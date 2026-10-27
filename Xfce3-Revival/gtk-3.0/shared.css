@@ -39,8 +39,8 @@ entry {
 }
 
 combobox menuitem:hover, combobox menuitem:checked, levelbar .filled,
-progress, switch:checked, 
-:selected, selection, XfdesktopIconView.label:selected {
+progress, switch:checked, :selected, selection, 
+treeview.view.progressbar, XfdesktopIconView.label:selected {
 	color: @selected_fg_color;
 	background-color: @selected_bg_color;
 }
